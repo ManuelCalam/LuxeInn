@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:translationY="100dp">
+
+        <EditText
+            android:id="@+id/editTextText"
+            android:layout_width="360dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:hint="Correo electrónico"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/editTextTextPassword"
+            android:layout_width="360dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:hint="Contraseña"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/buttonGoogle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Iniciar sesión con Google"
+            app:cornerRadius="10dp" />
+
+        <Button
+            android:id="@+id/buttonLimpiar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Limpiar"
+            app:cornerRadius="10dp"/>
+
+        <Switch
+            android:id="@+id/switchNuevaCuenta"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            android:text="¿Crear nueva cuenta?" />
+
+
+    </LinearLayout>
+</ScrollView>
