@@ -1,4 +1,4 @@
-package com.android.example.preguntas
+package com.example.luxeinn
 
 import android.view.LayoutInflater
 import android.view.View

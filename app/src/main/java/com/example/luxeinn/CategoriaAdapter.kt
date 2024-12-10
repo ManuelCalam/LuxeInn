@@ -1,4 +1,4 @@
-package com.android.example.preguntas
+package com.example.luxeinn
 
 import android.view.LayoutInflater
 import android.view.View
@@ -74,9 +74,21 @@ class CategoriaAdapter(private val categorias: List<Categoria>) :
 
     inner class CategoriaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val textCategoria: TextView = itemView.findViewById(R.id.textCategoria)
+        private val iconCategoria: ImageView = itemView.findViewById(R.id.iconCategoria)
 
         fun bind(categoria: Categoria) {
             textCategoria.text = categoria.nombre
+
+            // Configurar el ícono basado en el nombre de la categoría
+            val iconRes = when (categoria.nombre) {
+                "Registro y Perfil de Usuario" -> R.drawable.registro
+                "Métodos de Pago" -> R.drawable.payment
+                "Gestión de Reservas" -> R.drawable.travel
+                "Soporte y Problemas" -> R.drawable.support
+                else -> R.drawable.default_icon // Ícono por defecto
+            }
+            iconCategoria.setImageResource(iconRes)
+
             textCategoria.setOnClickListener {
                 val categoriaIndex = categorias.indexOf(categoria)
                 if (expandedCategories.contains(categoriaIndex)) {
@@ -88,6 +100,7 @@ class CategoriaAdapter(private val categorias: List<Categoria>) :
             }
         }
     }
+
 
     inner class PreguntaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val textPregunta: TextView = itemView.findViewById(R.id.textPregunta)

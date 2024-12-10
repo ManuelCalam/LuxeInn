@@ -1,4 +1,4 @@
-package com.android.example.preguntas
+package com.example.luxeinn
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
