@@ -13,6 +13,10 @@
         android:theme="@style/Theme.LuxeInn"
         tools:targetApi="31">
         <activity
+            android:name=".Preguntas_Frecuentes"
+            android:exported="false" />
+        <category android:name="android.intent.category.LAUNCHER" />
+        <activity
             android:name=".Login"
             android:exported="false" />
         <activity
@@ -21,7 +25,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+
             </intent-filter>
         </activity>
     </application>
