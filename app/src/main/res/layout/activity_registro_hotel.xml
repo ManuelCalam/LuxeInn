@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="16dp">
 
     <LinearLayout
@@ -149,28 +150,51 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-        <Button
-            android:id="@+id/btn_save"
-            android:text="Guardar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="407dp"
+            android:layout_height="72dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.675">
 
-        <Button
-            android:id="@+id/btn_edit"
-            android:text="Editar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <ImageButton
+                android:id="@+id/btn_save"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Agregar"
+                app:srcCompat="@android:drawable/ic_input_add" />
 
-        <Button
-            android:id="@+id/btn_delete"
-            android:text="Eliminar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <ImageButton
+                android:id="@+id/btn_buscar"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Buscar"
+                app:srcCompat="@android:drawable/ic_menu_search" />
 
-        <Button
-            android:id="@+id/btn_buscar"
-            android:text="Buscar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <ImageButton
+                android:id="@+id/btn_edit"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Actualizar"
+                app:srcCompat="@android:drawable/ic_menu_recent_history" />
+
+            <ImageButton
+                android:id="@+id/btn_delete"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Eliminar"
+                app:srcCompat="@android:drawable/ic_menu_delete" />
+
+        </LinearLayout>
+
     </LinearLayout>
 </ScrollView>
