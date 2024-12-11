@@ -7,13 +7,27 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.widget.Toolbar
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.GenericTypeIndicator
+import com.google.firebase.database.ValueEventListener
+
 
 import java.util.Calendar
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var hotelAdapter: HotelAdapter
+    private lateinit var hotelList: MutableList<Hotel2>
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -40,7 +54,17 @@ class MainActivity : AppCompatActivity() {
             pendingIntent
         )
 
+
+        recyclerView = findViewById(R.id.rv_hotels)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        hotelList = mutableListOf()
+
+        hotelAdapter = HotelAdapter(this, hotelList)
+        recyclerView.adapter = hotelAdapter
+
+        fetchHotels()
     }
+
 
     // Inflar el menú de desbordamiento
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -75,8 +99,40 @@ class MainActivity : AppCompatActivity() {
             R.id.logout -> {
                 return true
             }
+            R.id.Registrar -> {
+                val registroIntent = Intent(this, RegistroHotelActivity::class.java)
+                startActivity(registroIntent)
+                return true
+            }
         }
         return super.onOptionsItemSelected(item)
 
+    }
+
+    private fun fetchHotels() {
+        val hotelRef = FirebaseDatabase.getInstance().getReference("Hotels")
+        hotelRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                hotelList.clear()
+                for (hotelSnapshot in snapshot.children) {
+                    val name = hotelSnapshot.child("name").getValue(String::class.java) ?: "No Name"
+                    val location = hotelSnapshot.child("location").getValue(String::class.java) ?: "Unknown"
+                    val services = hotelSnapshot.child("services")
+                        .getValue(object : GenericTypeIndicator<List<String>>() {})
+                        ?.joinToString(", ") ?: "No services"
+                    val imageUrl = hotelSnapshot.child("imageUrl").getValue(String::class.java) ?: ""
+
+
+                    // Agregar el hotel a la lista
+                    hotelList.add(Hotel2(name, location, services, imageUrl))
+                }
+                hotelAdapter.notifyDataSetChanged()
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                // Manejar errores
+                Log.e("FirebaseError", "Error al obtener datos: ${error.message}")
+            }
+        })
     }
 }
