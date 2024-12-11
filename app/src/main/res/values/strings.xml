@@ -9,4 +9,18 @@
     <string name="mapa_de_hoteles">Mapa de Hoteles</string>
     <string name="acerca_de_nosotros">Acerca de Nosotros</string>
     <string name="cerrar_sesi_n">Cerrar Sesión</string>
+
+    <string name="nosotros">Acerca de nosotros</string>
+    <string name="LuxeInn">LuxeInn es una aplicación de reservas de hoteles que te ofrece una
+        experiencia única, rápida y segura al momento de elegir tu alojamiento. Con una
+        selección de hoteles premium en todo el mundo, nuestra misión es brindarte opciones
+        de calidad, accesibles y con la mejor tecnología para facilitar tu viaje.</string>
+    <string name="infoValores">Nuestros valores:
+        \nSe centran en la calidad, confianza, innovación,sostenibilidad y atención personalizada.
+        Nos esforzamos por ofrecerte una experiencia sin complicaciones, con soporte 24/7 y
+        ofertas exclusivas para que disfrutes de cada viaje al máximo.</string>
+    <string name="infoMision">Nuestra misión:
+        \nNuestra misión es revolucionar la forma de reservar estancias, ofreciendo alojamientos de calidad
+        y una experiencia excepcional, personalizada, intuitiva y segura desde el primer clic.</string>
+
 </resources>

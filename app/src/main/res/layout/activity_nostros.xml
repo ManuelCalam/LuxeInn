@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NostrosActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="415dp"
+        android:layout_height="157dp"
+        android:background="#274690"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="183dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="30dp">
+
+            <TextView
+                android:id="@+id/txtInfoMision"
+                android:layout_width="357dp"
+                android:layout_height="116dp"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginBottom="120dp"
+                android:background="@drawable/rounded_background"
+                android:hint="@string/infoMision"
+                android:justificationMode="inter_word"
+                android:padding="16dp"
+                android:textAlignment="center"
+                android:textColorHint="#FBFAFA"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtInfoValores" />
+
+            <TextView
+                android:id="@+id/txtInfoValores"
+                android:layout_width="359dp"
+                android:layout_height="152dp"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="26dp"
+                android:layout_marginBottom="54dp"
+                android:background="@drawable/rounded_background"
+                android:hint="@string/infoValores"
+                android:justificationMode="inter_word"
+                android:padding="16dp"
+                android:textAlignment="center"
+                android:textColorHint="#FBF7F7"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/txtInfoMision"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtLuxeInn" />
+
+            <TextView
+                android:id="@+id/txtLuxeInn"
+                android:layout_width="354dp"
+                android:layout_height="133dp"
+                android:layout_marginStart="29dp"
+                android:layout_marginTop="-60dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginBottom="21dp"
+                android:background="@drawable/rounded_background"
+                android:hint="@string/LuxeInn"
+                android:justificationMode="inter_word"
+                android:padding="16dp"
+                android:textAlignment="center"
+                android:textColorHint="#F6F6F8"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/txtInfoValores"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="189dp"
+                android:layout_height="66dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="13dp"
+                android:layout_marginBottom="53dp"
+                app:layout_constraintBottom_toTopOf="@+id/txtLuxeInn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtNosotros"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/logo" />
+
+            <TextView
+                android:id="@+id/txtNosotros"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="54dp"
+                android:layout_marginEnd="7dp"
+                android:layout_marginBottom="34dp"
+                android:backgroundTint="#8E1F1F"
+                android:hint="@string/nosotros"
+                android:textColorHint="#FBFAFA"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/txtLuxeInn"
+                app:layout_constraintEnd_toStartOf="@+id/imageView2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
