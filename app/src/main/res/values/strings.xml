@@ -4,9 +4,11 @@
     <string name="hotelLocation_Sample">Puerto Vallarta, Jalisco</string>
     <string name="hotelInfo_Sample">Hotel con spa, cerca de Galeria Vallarta</string>
     <string name="hotelServices_Sample">Incluye: "\n"- WiFi "\n"- Piscina "\n- Desayuno"</string>
+    <string name="hotelPrice_Sample">500</string>
 
     <string name="hoteles">Hoteles</string>
     <string name="mapa_de_hoteles">Mapa de Hoteles</string>
+    <string name="preguntas_frecuentes">FAQ</string>
     <string name="acerca_de_nosotros">Acerca de Nosotros</string>
     <string name="cerrar_sesi_n">Cerrar Sesión</string>
 
@@ -23,4 +25,5 @@
         \nNuestra misión es revolucionar la forma de reservar estancias, ofreciendo alojamientos de calidad
         y una experiencia excepcional, personalizada, intuitiva y segura desde el primer clic.</string>
 
+    <string name="expand_icon">ejemplo</string>
 </resources>

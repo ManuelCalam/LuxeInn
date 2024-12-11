@@ -19,8 +19,12 @@
             android:name=".NostrosActivity"
             android:exported="false" />
 
+
         <receiver android:name=".NotificationReceiver" />
 
+        <activity
+            android:name=".Preguntas_Frecuentes"
+            android:exported="false" />
         <activity
             android:name=".RegistroHotelActivity"
             android:exported="false" />
@@ -35,7 +39,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
