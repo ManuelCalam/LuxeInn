@@ -73,10 +73,22 @@ class Login : AppCompatActivity() {
     }
 
     private fun validarCorreo() {
+        correo = usuario.text.toString()
+        passwd = contra.text.toString()
+
         mAuth.signInWithEmailAndPassword(correo, passwd)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    lanzarFormulario()
+                    val user = mAuth.currentUser
+                    if (user != null) {
+                        if (user.uid == "FGwTO1DVMubg09T7GxjzCFpm8cV2") {
+                            // UID del admin detectado, redirigir a RegistroHotelActivity
+                            lanzarRegistroHotel()
+                        } else {
+                            // Usuario normal, lanzar MainActivity
+                            lanzarFormulario()
+                        }
+                    }
                 } else {
                     val errorMessage = task.exception?.message ?: "Datos incorrectos"
                     Toast.makeText(baseContext, errorMessage, Toast.LENGTH_LONG).show()
@@ -85,6 +97,12 @@ class Login : AppCompatActivity() {
             }
         borrarValores()
     }
+
+    private fun lanzarRegistroHotel() {
+        val registroHotelIntent = Intent(this, RegistroHotelActivity::class.java)
+        startActivity(registroHotelIntent)
+    }
+
 
     private fun registrarNuevaCuenta() {
         if (correo.isNotEmpty() && passwd.isNotEmpty()) {
