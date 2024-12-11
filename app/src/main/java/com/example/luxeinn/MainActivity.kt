@@ -61,6 +61,11 @@ class MainActivity : AppCompatActivity() {
                 startActivity(videoIntent)
                 return true
             }
+            R.id.FAQ -> {
+                val sensorIntent = Intent(this, Preguntas_Frecuentes::class.java)
+                startActivity(sensorIntent)
+                return true
+            }
             R.id.aboutUs -> {
                 //val sensorIntent = Intent(this, AboutUs::class.java)
                 //startActivity(sensorIntent)
