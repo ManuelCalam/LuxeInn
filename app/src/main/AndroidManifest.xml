@@ -13,6 +13,9 @@
         android:theme="@style/Theme.LuxeInn"
         tools:targetApi="31">
         <activity
+            android:name=".RegistroHotelActivity"
+            android:exported="false" />
+        <activity
             android:name=".Login"
             android:exported="false" />
         <activity
