@@ -9,6 +9,8 @@
     <string name="hoteles">Hoteles</string>
     <string name="mapa_de_hoteles">Mapa de Hoteles</string>
     <string name="preguntas_frecuentes">FAQ</string>
+    <string name="sensor">Sensor</string>
+    <string name="titulo_sensor">Sensor</string>
     <string name="acerca_de_nosotros">Acerca de Nosotros</string>
     <string name="cerrar_sesi_n">Cerrar Sesión</string>
     <string name="expand_icon">ejemplo</string>
