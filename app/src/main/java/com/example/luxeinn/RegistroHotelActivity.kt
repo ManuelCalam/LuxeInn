@@ -29,10 +29,10 @@ class RegistroHotelActivity : AppCompatActivity() {
     private lateinit var cbBreakfast: CheckBox
     private lateinit var cbBalcon: CheckBox
     private lateinit var switchAvailability: Switch
-    private lateinit var btnSave: Button
-    private lateinit var btnEdit: Button
-    private lateinit var btnDelete: Button
-    private lateinit var btnBuscar: Button
+    private lateinit var btnSave: ImageButton
+    private lateinit var btnEdit: ImageButton
+    private lateinit var btnDelete: ImageButton
+    private lateinit var btnBuscar: ImageButton
 
     private val firestore = FirebaseFirestore.getInstance()
     private val database = FirebaseDatabase.getInstance()
@@ -61,10 +61,10 @@ class RegistroHotelActivity : AppCompatActivity() {
         cbBreakfast = findViewById(R.id.cb_breakfast)
         cbBalcon = findViewById(R.id.cb_balcon)
         switchAvailability = findViewById(R.id.switch_availability)
-        btnSave = findViewById(R.id.btn_save)
-        btnEdit = findViewById(R.id.btn_edit)
-        btnDelete = findViewById(R.id.btn_delete)
-        btnBuscar = findViewById(R.id.btn_buscar )
+        btnSave = findViewById<ImageButton>(R.id.btn_save)
+        btnEdit = findViewById<ImageButton>(R.id.btn_edit)
+        btnDelete = findViewById<ImageButton>(R.id.btn_delete)
+        btnBuscar = findViewById<ImageButton>(R.id.btn_buscar )
 
         btnSave.setOnClickListener { saveHotel() }
         btnEdit.setOnClickListener { editHotel() }
