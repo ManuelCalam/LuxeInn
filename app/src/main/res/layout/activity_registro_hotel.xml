@@ -1,52 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="16dp">
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="60dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginBottom="50dp">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Registro de hoteles"
+            android:textAlignment="center"
+            android:textColor="@color/blue"
+            android:textSize="34sp" />
 
         <EditText
             android:id="@+id/et_hotel_name"
-            android:hint="Nombre del hotel"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Nombre del hotel" />
 
         <EditText
             android:id="@+id/et_hotel_location"
-            android:hint="Lugar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Lugar" />
 
         <EditText
             android:id="@+id/et_hotel_info"
-            android:hint="Información"
-            android:inputType="textMultiLine"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Información"
+            android:inputType="textMultiLine" />
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <EditText
                 android:id="@+id/et_latitude"
-                android:hint="Latitud"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:hint="Latitud" />
 
             <EditText
                 android:id="@+id/et_longitude"
-                android:hint="Longitud"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:hint="Longitud" />
 
         </LinearLayout>
 
@@ -54,6 +73,7 @@
             android:id="@+id/et_image_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:ems="10"
             android:hint="Nombre de la imagen"
             android:inputType="text" />
@@ -67,12 +87,14 @@
                 android:id="@+id/cb_single_room"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
                 android:text="Cuarto simple" />
 
             <CheckBox
                 android:id="@+id/cb_double_room"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:text="Cuarto Doble" />
 
@@ -80,38 +102,44 @@
                 android:id="@+id/cb_triple_room"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:text="Cuarto Triple" />
         </LinearLayout>
 
         <EditText
             android:id="@+id/et_price_single"
-            android:hint="Precio cuarto simple"
-            android:inputType="numberDecimal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Precio cuarto simple"
+            android:inputType="numberDecimal" />
 
         <!-- Similar CheckBoxes and EditTexts for double and triple rooms -->
 
         <EditText
             android:id="@+id/et_price_double"
-            android:hint="Precio cuarto doble"
-            android:inputType="numberDecimal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Precio cuarto doble"
+            android:inputType="numberDecimal" />
 
         <EditText
             android:id="@+id/et_price_triple"
-            android:hint="Precio cuarto triple"
-            android:inputType="numberDecimal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Precio cuarto triple"
+            android:inputType="numberDecimal" />
 
         <TextView
-            android:text="Servicios incluidos"
-            android:textStyle="bold"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Servicios incluidos"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -135,6 +163,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Breakfast" />
+
             <CheckBox
                 android:id="@+id/cb_balcon"
                 android:layout_width="wrap_content"
@@ -146,9 +175,9 @@
 
         <Switch
             android:id="@+id/switch_availability"
-            android:text="Disponible"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="Disponible" />
 
         <LinearLayout
             android:id="@+id/linearLayout"

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="8dp"
+    android:layout_height="160dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
     android:padding="8dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="139dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <!-- Imagen del hotel -->
@@ -17,15 +17,16 @@
         <!-- Información del hotel -->
         <ImageView
             android:id="@+id/iv_hotel_image"
-            android:layout_width="110dp"
+            android:layout_width="150dp"
             android:layout_height="match_parent"
-            android:layout_marginEnd="8dp"
             android:scaleType="centerCrop"
             android:src="@drawable/imagen1" />
 
         <LinearLayout
             android:layout_width="287dp"
             android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:layout_weight="1"
             android:orientation="vertical">
 
@@ -33,6 +34,9 @@
                 android:id="@+id/tv_hotel_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
                 android:text="Hotel Name"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -41,26 +45,35 @@
                 android:id="@+id/tv_hotel_location"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:text="Location" />
 
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:text="Servicios:" />
 
             <TextView
                 android:id="@+id/tv_hotel_services"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:text="Services" />
 
             <Button
                 android:id="@+id/VerMas"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:backgroundTint="#DC6ACF"
-                android:text="Ver mas.."
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginRight="10dp"
+                android:backgroundTint="#FF3D3D"
+                android:text="Ver mas"
                 app:cornerRadius="10dp" />
 
         </LinearLayout>

@@ -1,6 +1,7 @@
 package com.example.luxeinn
 
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.widget.MediaController
 import android.widget.VideoView
@@ -26,5 +27,9 @@ class NostrosActivity : AppCompatActivity() {
 
         // Iniciar el video
         videoView.start()
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.statusBarColor = resources.getColor(R.color.blue, theme)
+        }
     }
 }

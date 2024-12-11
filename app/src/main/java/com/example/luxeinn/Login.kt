@@ -1,6 +1,7 @@
 package com.example.luxeinn
 
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -58,6 +59,10 @@ class Login : AppCompatActivity() {
         limpiar.setOnClickListener { borrarValores() }
         iniciar.setOnClickListener { signInWithGoogle() }
         usuario.doOnTextChanged { _, _, _, _ -> existeDominio() }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.statusBarColor = resources.getColor(R.color.blue, theme)
+        }
 
     }
 

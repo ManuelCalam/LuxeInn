@@ -4,6 +4,7 @@ import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -61,6 +62,10 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = hotelAdapter
 
         fetchHotels()
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.statusBarColor = resources.getColor(R.color.blue, theme)
+        }
     }
 
 
@@ -74,13 +79,8 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.menu_hoteles -> {
-                val catalogoIntent = Intent(this, HotelDescription::class.java)
+                val catalogoIntent = Intent(this, MainActivity::class.java)
                 startActivity(catalogoIntent)
-                return true
-            }
-            R.id.menu_mapa -> {
-                val videoIntent = Intent(this, RegistroHotelActivity::class.java)
-                startActivity(videoIntent)
                 return true
             }
             R.id.FAQ -> {
@@ -94,12 +94,14 @@ class MainActivity : AppCompatActivity() {
                 return true
             }
             R.id.aboutUs -> {
-                //val sensorIntent = Intent(this, AboutUs::class.java)
-                //startActivity(sensorIntent)
+                val sensorIntent = Intent(this, NostrosActivity::class.java)
+                startActivity(sensorIntent)
                 return true
             }
 
             R.id.logout -> {
+                val sensorIntent = Intent(this, Login::class.java)
+                startActivity(sensorIntent)
                 return true
             }
 

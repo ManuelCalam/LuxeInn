@@ -1,6 +1,7 @@
 package com.example.luxeinn
 
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.widget.*
@@ -70,6 +71,10 @@ class RegistroHotelActivity : AppCompatActivity() {
         btnEdit.setOnClickListener { editHotel() }
         btnDelete.setOnClickListener { deleteHotel(  ) }
         btnBuscar.setOnClickListener{ searchHotel() }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.statusBarColor = resources.getColor(R.color.blue, theme)
+        }
 
     }
 

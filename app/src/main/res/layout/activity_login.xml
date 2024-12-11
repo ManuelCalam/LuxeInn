@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Login">
 
     <LinearLayout
@@ -12,30 +13,44 @@
         android:gravity="center_horizontal"
         android:orientation="vertical"
         android:padding="16dp"
-        android:translationY="100dp">
+        android:translationY="120dp">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="342dp"
+            android:layout_height="112dp"
+            android:src="@drawable/logo" />
 
         <EditText
             android:id="@+id/editTextText"
             android:layout_width="360dp"
             android:layout_height="50dp"
             android:layout_marginTop="16dp"
+            android:drawableStart="@drawable/user"
+            android:drawablePadding="8dp"
             android:hint="Correo electrónico"
-            android:inputType="text" />
+            android:inputType="text"
+            android:pointerIcon="handwriting" />
 
         <EditText
             android:id="@+id/editTextTextPassword"
             android:layout_width="360dp"
             android:layout_height="50dp"
             android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:drawableStart="@drawable/key"
+            android:drawablePadding="8dp"
             android:hint="Contraseña"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:pointerIcon="handwriting" />
 
         <Button
             android:id="@+id/ingresarButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#DC6ACF"
+            android:backgroundTint="#274690"
             android:text="Ingresar"
+            android:textColor="#FFFFFF"
             app:cornerRadius="10dp" />
 
 
@@ -43,25 +58,25 @@
             android:id="@+id/buttonGoogle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:backgroundTint="#E42121"
+            android:backgroundTint="#FF3D3D"
             android:text="Iniciar sesión con Google"
+            android:textColor="#FFFFFF"
             app:cornerRadius="10dp" />
 
         <Button
             android:id="@+id/buttonLimpiar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:backgroundTint="#DC6ACF"
+            android:backgroundTint="#FFAA00"
             android:text="Limpiar"
+            android:textColor="#FFFFFF"
             app:cornerRadius="10dp" />
 
         <Switch
             android:id="@+id/switchNuevaCuenta"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="10dp"
             android:text="¿Crear nueva cuenta?" />
 
 
