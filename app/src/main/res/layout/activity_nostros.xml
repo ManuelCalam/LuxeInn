@@ -5,129 +5,101 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".NostrosActivity">
 
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtNosotros"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:backgroundTint="#8E1F1F"
+                android:hint="@string/nosotros"
+                android:textAlignment="center"
+                android:textColorHint="#274690"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtLuxeInn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_background2"
+                android:hint="@string/LuxeInn"
+                android:justificationMode="inter_word"
+                android:padding="16dp"
+                android:textAlignment="inherit"
+                android:textColorHint="#F6F6F8"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txtInfoValores"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_background"
+                android:hint="@string/infoValores"
+                android:justificationMode="inter_word"
+                android:padding="16dp"
+                android:textAlignment="inherit"
+                android:textColorHint="#FBF7F7"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txtInfoMision"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_background3"
+                android:hint="@string/infoMision"
+                android:justificationMode="inter_word"
+                android:padding="16dp"
+                android:textAlignment="inherit"
+                android:textColorHint="#FBFAFA"
+                android:textSize="14sp" />
+
+            <VideoView
+                android:id="@+id/videoView3"
+                android:layout_width="385dp"
+                android:layout_height="209dp"
+                android:layout_marginTop="27dp" />
+        </LinearLayout>
+    </ScrollView>
+
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar2"
-        android:layout_width="415dp"
-        android:layout_height="157dp"
+        android:id="@+id/toolbar3"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
         android:background="#274690"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/txtNosotros"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="15dp"
-        android:backgroundTint="#8E1F1F"
-        android:hint="@string/nosotros"
-        android:textColorHint="#FBFAFA"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/txtLuxeInn"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="@+id/toolbar2"
-        app:layout_constraintTop_toTopOf="@+id/toolbar2" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="189dp"
-        android:layout_height="66dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="35dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtLuxeInn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txtNosotros"
-        app:layout_constraintTop_toTopOf="@+id/toolbar2"
-        app:srcCompat="@drawable/logo" />
-
-    <TextView
-        android:id="@+id/txtLuxeInn"
-        android:layout_width="354dp"
-        android:layout_height="133dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/rounded_background"
-        android:hint="@string/LuxeInn"
-        android:justificationMode="inter_word"
-        android:padding="16dp"
-        android:textAlignment="center"
-        android:textColorHint="#F6F6F8"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtInfoValores"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-    <TextView
-        android:id="@+id/txtInfoValores"
-        android:layout_width="359dp"
-        android:layout_height="152dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="-20dp"
-        android:layout_marginEnd="27dp"
-        android:layout_marginBottom="28dp"
-        android:background="@drawable/rounded_background"
-        android:hint="@string/infoValores"
-        android:justificationMode="inter_word"
-        android:padding="16dp"
-        android:textAlignment="center"
-        android:textColorHint="#FBF7F7"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtInfoMision"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtLuxeInn" />
-
-    <TextView
-        android:id="@+id/txtInfoMision"
-        android:layout_width="357dp"
-        android:layout_height="116dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="-10dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="42dp"
-        android:background="@drawable/rounded_background"
-        android:hint="@string/infoMision"
-        android:justificationMode="inter_word"
-        android:padding="16dp"
-        android:textAlignment="center"
-        android:textColorHint="#FBFAFA"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtInfoValores" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="274dp"
-        android:layout_height="157dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="-27dp"
-        android:layout_marginEnd="69dp"
-        android:layout_marginBottom="67dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtInfoMision">
-
-        <VideoView
-            android:id="@+id/videoView3"
-            android:layout_width="385dp"
-            android:layout_height="209dp" />
-    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

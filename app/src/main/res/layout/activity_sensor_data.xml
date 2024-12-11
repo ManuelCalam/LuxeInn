@@ -5,6 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+
     tools:context=".SensorDataActivity">
 
     <LinearLayout
@@ -44,7 +46,7 @@
         android:id="@+id/toolbar5"
         android:layout_width="434dp"
         android:layout_height="77dp"
-        android:background="?attr/colorPrimary"
+        android:background="#274690"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintBottom_toBottomOf="parent"

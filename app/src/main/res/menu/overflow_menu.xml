@@ -4,9 +4,6 @@
         android:id="@+id/menu_hoteles"
         android:title="@string/hoteles" />
     <item
-        android:id="@+id/menu_mapa"
-        android:title="@string/mapa_de_hoteles" />
-    <item
         android:id="@+id/FAQ"
         android:title="@string/preguntas_frecuentes" />
     <item
