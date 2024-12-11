@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.example.luxeinn"
-    compileSdk = 35
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.luxeinn"
