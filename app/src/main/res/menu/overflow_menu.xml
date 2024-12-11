@@ -10,6 +10,9 @@
         android:id="@+id/FAQ"
         android:title="@string/preguntas_frecuentes" />
     <item
+        android:id="@+id/Sensor"
+        android:title="@string/sensor" />
+    <item
         android:id="@+id/aboutUs"
         android:title="@string/acerca_de_nosotros" />
     <item

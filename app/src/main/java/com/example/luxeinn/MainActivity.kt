@@ -66,6 +66,11 @@ class MainActivity : AppCompatActivity() {
                 startActivity(sensorIntent)
                 return true
             }
+            R.id.Sensor -> {
+                val sensorIntent = Intent(this, SensorDataActivity::class.java)
+                startActivity(sensorIntent)
+                return true
+            }
             R.id.aboutUs -> {
                 //val sensorIntent = Intent(this, AboutUs::class.java)
                 //startActivity(sensorIntent)
