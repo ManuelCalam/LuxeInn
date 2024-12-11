@@ -57,8 +57,8 @@ class MainActivity : AppCompatActivity() {
                 return true
             }
             R.id.menu_mapa -> {
-                //val videoIntent = Intent(this, MapaHoteles::class.java)
-                //startActivity(videoIntent)
+                val videoIntent = Intent(this, RegistroHotelActivity::class.java)
+                startActivity(videoIntent)
                 return true
             }
             R.id.aboutUs -> {
