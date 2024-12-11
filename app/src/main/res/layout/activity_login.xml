@@ -31,10 +31,20 @@
             android:inputType="textPassword" />
 
         <Button
+            android:id="@+id/ingresarButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#DC6ACF"
+            android:text="Ingresar"
+            app:cornerRadius="10dp" />
+
+
+        <Button
             android:id="@+id/buttonGoogle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:backgroundTint="#E42121"
             android:text="Iniciar sesión con Google"
             app:cornerRadius="10dp" />
 
@@ -43,8 +53,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:backgroundTint="#DC6ACF"
             android:text="Limpiar"
-            app:cornerRadius="10dp"/>
+            app:cornerRadius="10dp" />
 
         <Switch
             android:id="@+id/switchNuevaCuenta"
