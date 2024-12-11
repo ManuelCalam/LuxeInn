@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LuxeInn"
         tools:targetApi="31">
+        <activity
+            android:name=".NostrosActivity"
+            android:exported="false" />
 
         <activity
             android:name=".SensorDataActivity"

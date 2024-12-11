@@ -1,6 +1,5 @@
 package com.example.luxeinn
 
-
 import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.Context
@@ -18,8 +17,6 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.GenericTypeIndicator
 import com.google.firebase.database.ValueEventListener
-
-
 import java.util.Calendar
 
 class MainActivity : AppCompatActivity() {
@@ -53,6 +50,7 @@ class MainActivity : AppCompatActivity() {
             interval.toLong(),
             pendingIntent
         )
+
 
 
         recyclerView = findViewById(R.id.rv_hotels)
