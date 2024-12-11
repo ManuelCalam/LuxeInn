@@ -1,0 +1,40 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textPregunta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Pregunta"
+        android:textAppearance="?attr/textAppearanceBody1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/imageExpandIcon"
+        app:layout_constraintHorizontal_bias="0" />
+
+    <ImageView
+        android:id="@+id/imageExpandIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:contentDescription="@string/expand_icon"
+        android:src="@drawable/baseline_add_24"
+        app:layout_constraintTop_toTopOf="@id/textPregunta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/textPregunta" />
+
+    <TextView
+        android:id="@+id/textRespuesta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="Respuesta"
+        android:textAppearance="?attr/textAppearanceBody2"
+        app:layout_constraintTop_toBottomOf="@id/textPregunta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
