@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_hoteles"
+        android:title="@string/hoteles" />
+    <item
+        android:id="@+id/menu_mapa"
+        android:title="@string/mapa_de_hoteles" />
+    <item
+        android:id="@+id/aboutUs"
+        android:title="@string/acerca_de_nosotros" />
+    <item
+        android:id="@+id/logout"
+        android:title="@string/cerrar_sesi_n" />
+</menu>

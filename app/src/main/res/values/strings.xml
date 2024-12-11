@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">LuxeInn</string>
+    <string name="hotelName_Sample">Holiday Inn And Suites Puerto Vallarta</string>
+    <string name="hotelLocation_Sample">Puerto Vallarta, Jalisco</string>
+    <string name="hotelInfo_Sample">Hotel con spa, cerca de Galeria Vallarta</string>
+    <string name="hotelServices_Sample">Incluye: "\n"- WiFi "\n"- Piscina "\n- Desayuno"</string>
+
+    <string name="hoteles">Hoteles</string>
+    <string name="mapa_de_hoteles">Mapa de Hoteles</string>
+    <string name="acerca_de_nosotros">Acerca de Nosotros</string>
+    <string name="cerrar_sesi_n">Cerrar Sesión</string>
 </resources>

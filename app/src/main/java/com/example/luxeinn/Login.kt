@@ -39,6 +39,7 @@ class Login : AppCompatActivity() {
 
         usuario = findViewById(R.id.editTextText)
         contra = findViewById(R.id.editTextTextPassword)
+        ingresar = findViewById(R.id.ingresarButton)
         limpiar = findViewById(R.id.buttonLimpiar)
         iniciar = findViewById(R.id.buttonGoogle)
         switchNuevaCuenta = findViewById(R.id.switchNuevaCuenta)
@@ -105,7 +106,7 @@ class Login : AppCompatActivity() {
     }
 
     private fun lanzarFormulario() {
-        val formulario = Intent(this, Formulario::class.java)
+        val formulario = Intent(this, MainActivity::class.java)
         startActivity(formulario)
     }
 
