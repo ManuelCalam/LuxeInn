@@ -1,20 +1,24 @@
 package com.example.luxeinn
 
+
+import android.app.AlarmManager
+import android.app.PendingIntent
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.widget.Toolbar
-import android.app.AlarmManager
 import android.app.PendingIntent
-import android.content.Context
+
 import java.util.Calendar
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 
         // Configuración de la Toolbar personalizada
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
@@ -26,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         val pendingIntent = PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE)
 
         val interval = 1 * 60 * 1000 // 1 minutos en milisegundos
+
         val startTime = Calendar.getInstance().timeInMillis
 
         // Configurar la alarma repetitiva
@@ -35,6 +40,7 @@ class MainActivity : AppCompatActivity() {
             interval.toLong(),
             pendingIntent
         )
+
     }
 
     // Inflar el menú de desbordamiento

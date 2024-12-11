@@ -21,6 +21,9 @@
         <receiver android:name=".NotificationReceiver" />
 
         <activity
+            android:name=".RegistroHotelActivity"
+            android:exported="false" />
+        <activity
             android:name=".HotelDescription"
             android:exported="false" />
         <activity
