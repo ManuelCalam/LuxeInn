@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="139dp"
+        android:orientation="horizontal">
+
+        <!-- Imagen del hotel -->
+
+        <!-- Información del hotel -->
+        <ImageView
+            android:id="@+id/iv_hotel_image"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/imagen1" />
+
+        <LinearLayout
+            android:layout_width="287dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_hotel_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hotel Name"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_hotel_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Servicios:" />
+
+            <TextView
+                android:id="@+id/tv_hotel_services"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Services" />
+
+            <Button
+                android:id="@+id/VerMas"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="#DC6ACF"
+                android:text="Ver mas.."
+                app:cornerRadius="10dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

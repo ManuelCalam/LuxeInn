@@ -10,6 +10,9 @@
         android:id="@+id/aboutUs"
         android:title="@string/acerca_de_nosotros" />
     <item
+        android:id="@+id/Registrar"
+        android:title="@string/acerca_de_nosotros" />
+    <item
         android:id="@+id/logout"
         android:title="@string/cerrar_sesi_n" />
 </menu>
