@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, NotificationReceiver::class.java)
         val pendingIntent = PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE)
 
-        val interval = 1 * 60 * 1000 // 2 minutos en milisegundos
+        val interval = 1 * 60 * 1000 // 1 minutos en milisegundos
         val startTime = Calendar.getInstance().timeInMillis
 
         // Configurar la alarma repetitiva
