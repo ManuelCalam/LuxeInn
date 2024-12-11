@@ -30,9 +30,13 @@ class HotelDescription : AppCompatActivity(), OnMapReadyCallback  {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hotel_description)
 
+        // Recuperar el nombre del hotel
+        //val hotelName = intent.getStringExtra("hotel_name")
+
+        // Muestra el nombre del hotel en un TextView o realiza alguna acción
+
         // Retrieve the hotel name from the intent
-        //val hotelName = intent.getStringExtra("hotelName") ?: ""
-        val hotelName = "Holiday Inn express"
+        val hotelName = intent.getStringExtra("hotel_name") ?: ""
         if (hotelName.isNotEmpty()) {
             // Call the search function with the hotel name
             searchHotel(hotelName)
