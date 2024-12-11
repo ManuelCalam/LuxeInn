@@ -15,7 +15,6 @@
         <activity
             android:name=".Preguntas_Frecuentes"
             android:exported="false" />
-        <category android:name="android.intent.category.LAUNCHER" />
         <activity
             android:name=".Login"
             android:exported="false" />
