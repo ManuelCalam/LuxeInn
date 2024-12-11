@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.Spinner
 import android.widget.TextView
@@ -23,22 +24,20 @@ class HotelDescription : AppCompatActivity(), OnMapReadyCallback  {
     private lateinit var mMap: GoogleMap
     private val database = FirebaseDatabase.getInstance()
     private val hotelRef = database.getReference("Hotels")
-
-
+    private lateinit var reservar: Button
+    private var pendingLocation: LatLng? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hotel_description)
 
-        // Recuperar el nombre del hotel
-        //val hotelName = intent.getStringExtra("hotel_name")
 
-        // Muestra el nombre del hotel en un TextView o realiza alguna acción
+        reservar = findViewById(R.id.reservarBtn)
+        reservar.setOnClickListener { agregarReserva() }
 
-        // Retrieve the hotel name from the intent
         val hotelName = intent.getStringExtra("hotel_name") ?: ""
         if (hotelName.isNotEmpty()) {
-            // Call the search function with the hotel name
+
             searchHotel(hotelName)
         } else {
             Toast.makeText(this, "Hotel name not provided", Toast.LENGTH_SHORT).show()
@@ -48,13 +47,23 @@ class HotelDescription : AppCompatActivity(), OnMapReadyCallback  {
         mapFragment.getMapAsync(this)
     }
 
+    fun agregarReserva(){
+        Toast.makeText(this, "Reservación registrada", Toast.LENGTH_SHORT).show()
+    }
 
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
         val initialLocation = LatLng(-34.0, 151.0)
         mMap.addMarker(MarkerOptions().position(initialLocation).title("Initial Marker"))
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(initialLocation, 10f))
+
+        // Check for any pending map update
+        pendingLocation?.let {
+            updateMapLocation(it.latitude, it.longitude)
+            pendingLocation = null // Clear after use
+        }
     }
+
 
     private fun populateHotelDescription(hotelData: Map<String, Any>) {
         // Set hotel name and info
@@ -105,7 +114,7 @@ class HotelDescription : AppCompatActivity(), OnMapReadyCallback  {
             roomSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
                 override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
                     val selectedRoom = roomOptions[position]
-                    priceTextView.text = "Price: ${roomPrices[selectedRoom]}"
+                    priceTextView.text = "Precio: $${roomPrices[selectedRoom]}"
                 }
 
                 override fun onNothingSelected(parent: AdapterView<*>) {
@@ -117,7 +126,7 @@ class HotelDescription : AppCompatActivity(), OnMapReadyCallback  {
         // Set hotel services
         val services = hotelData["services"] as? List<String> ?: emptyList()
         val servicesTextView = findViewById<TextView>(R.id.hotelServices)
-        servicesTextView.text = "Services: ${services.joinToString(", ")}"
+        servicesTextView.text = "Servicios: ${services.joinToString(", ")}"
 
         // Update map location
         val latitude = hotelData["latitude"] as? Double ?: 0.0
@@ -127,12 +136,19 @@ class HotelDescription : AppCompatActivity(), OnMapReadyCallback  {
 
 
 
+
     private fun updateMapLocation(latitude: Double, longitude: Double) {
-        val hotelLocation = LatLng(latitude, longitude)
-        mMap.clear() // Clear any existing markers
-        mMap.addMarker(MarkerOptions().position(hotelLocation).title("Hotel Location"))
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(hotelLocation, 15f))
+        if (::mMap.isInitialized) {
+            val hotelLocation = LatLng(latitude, longitude)
+            mMap.clear()
+            mMap.addMarker(MarkerOptions().position(hotelLocation).title("Hotel Location"))
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(hotelLocation, 15f))
+        } else {
+            pendingLocation = LatLng(latitude, longitude) // Queue the update
+        }
     }
+
+
 
 
 
@@ -151,7 +167,6 @@ class HotelDescription : AppCompatActivity(), OnMapReadyCallback  {
                 val hotelData = hotelSnapshot.value as? Map<String, Any>
                 if (hotelData != null) {
                     populateHotelDescription(hotelData)
-                    Toast.makeText(this, "Hotel encontrado", Toast.LENGTH_SHORT).show()
                 }
             } else {
                 Toast.makeText(this, "Hotel no encontrado", Toast.LENGTH_SHORT).show()

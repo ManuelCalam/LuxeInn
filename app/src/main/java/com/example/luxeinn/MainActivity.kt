@@ -99,11 +99,7 @@ class MainActivity : AppCompatActivity() {
             R.id.logout -> {
                 return true
             }
-            R.id.Registrar -> {
-                val registroIntent = Intent(this, RegistroHotelActivity::class.java)
-                startActivity(registroIntent)
-                return true
-            }
+
         }
         return super.onOptionsItemSelected(item)
 
