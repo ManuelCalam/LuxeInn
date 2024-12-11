@@ -16,10 +16,7 @@
         android:theme="@style/Theme.LuxeInn"
         tools:targetApi="31">
 
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyATyG4_zWuDHGq1FSi2GUQx4XHjl9jY64c"
-            />
+        
 
         <activity
             android:name=".NostrosActivity"
